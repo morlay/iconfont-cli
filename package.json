@@ -1,6 +1,6 @@
 {
   "name": "iconfont-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CLI wrapper of [gulp-iconfont](https://github.com/nfroidure/gulp-iconfont)",
   "bin": {
     "iconfont": "bin/iconfont.js"
