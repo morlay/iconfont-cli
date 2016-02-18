@@ -12,17 +12,17 @@
     "test": "npm prune && ./run.sh"
   },
   "dependencies": {
-    "babel": "^5.8.34",
-    "babel-core": "^5.8.34",
+    "babel": "^6.5.2",
+    "babel-core": "^6.5.2",
     "gulp-consolidate": "^0.1.2",
-    "gulp-iconfont": "^5.0.1",
+    "gulp-iconfont": "^6.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-svg-ignore": "0.0.2",
-    "vinyl-fs": "^2.2.1",
-    "yargs": "^3.30.0"
+    "vinyl-fs": "^2.3.1",
+    "yargs": "^4.1.0"
   },
   "devDependencies": {
-    "eslint": "^1.10.3"
+    "eslint": "^2.1.0"
   },
   "directories": {
     "example": "example"

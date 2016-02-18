@@ -10,6 +10,7 @@
 .icon {
     font-family: "<%= fontName %>";
     position: relative;
+    font-size: 40px;
     display: inline-block;
     font-style: normal;
     font-weight: normal;
@@ -19,4 +20,3 @@
 
 <% for (var idx = 0; idx < glyphs.length; idx++) { %>
 .icon--<%= glyphs[idx].name %>:before { content: '\<%= glyphs[idx].unicode[0].toString(16).toUpperCase() %>';}<% } %>
-
