@@ -23,7 +23,7 @@ function iconFont(src, options = {}) {
     .pipe(gulpSvgIgnore(options.svgIgnores))
     .pipe(gulpIconfont(options))
     .on('glyphs', (glyphs) => {
-      if (options.templates.length) {
+      if (!!options.templates) {
         generateFileFromTpl(glyphs, options);
       }
     })
