@@ -8,10 +8,12 @@ function generateFileFromTpl(glyphs, options) {
   return gulp.src(options.templates)
     .pipe(consolidate(options.templateEngine, {
       ...options,
-      glyphs: glyphs
+      glyphs,
     }))
     .pipe(rename((pathObj) => {
-      pathObj.extname = '';
+      Object.assign(pathObj, {
+        extname: '',
+      });
     }))
     .pipe(gulp.dest(options.templateOutDir || options.outDir));
 }
@@ -20,9 +22,9 @@ function iconFont(src, options = {}) {
   return gulp.src(src)
     .pipe(gulpSvgIgnore(options.svgIgnores))
     .pipe(gulpIconfont(options))
-    .on('glyphs', (glyphs)=> {
+    .on('glyphs', (glyphs) => {
       if (options.templates.length) {
-        generateFileFromTpl(glyphs, options)
+        generateFileFromTpl(glyphs, options);
       }
     })
     .pipe(gulp.dest(options.outDir));
