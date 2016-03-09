@@ -10,7 +10,7 @@
     "lint": "eslint src",
     "iconfont": "node ./bin/iconfont ./example/svgs/*.svg -o ./example/dist -t ./example/templates/icons.css.ejs ./example/templates/index.html.ejs --template-out-dir ./example/dist",
     "build": "babel src/ --out-dir lib/",
-    "test": "npm prune && npm run build && npm run iconfont"
+    "test": "npm prune && npm run lint && npm run build && npm run iconfont"
   },
   "dependencies": {
     "gulp-consolidate": "0.2.x",
